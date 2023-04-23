@@ -64,7 +64,7 @@ def read_image(x):
     return img_arr
 
 def image_alignment(x, output_stride, odd=False):
-    imsize = np.asarray(x.shape[:2], dtype=np.float)
+    imsize = np.asarray(x.shape[:2], dtype=np.float32)
     if odd:
         new_imsize = np.ceil(imsize / output_stride) * output_stride + 1
     else:
